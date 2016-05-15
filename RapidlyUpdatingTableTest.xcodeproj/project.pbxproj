@@ -14,6 +14,9 @@
 		5AB67F821CE8A303008FC751 /* RapidlyUpdatingTableTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AB67F801CE8A303008FC751 /* RapidlyUpdatingTableTest.xcdatamodeld */; };
 		5AB67F841CE8A303008FC751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AB67F831CE8A303008FC751 /* Assets.xcassets */; };
 		5AB67F871CE8A303008FC751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB67F851CE8A303008FC751 /* LaunchScreen.storyboard */; };
+		5AB67F901CE8DF9E008FC751 /* ConversationListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB67F8F1CE8DF9E008FC751 /* ConversationListTableViewController.m */; };
+		5AB67F931CE8DFD5008FC751 /* ConversationListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB67F921CE8DFD5008FC751 /* ConversationListDataSource.m */; };
+		5AB67F971CE8E0E2008FC751 /* dummyConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB67F961CE8E0E2008FC751 /* dummyConversationModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		5AB67F831CE8A303008FC751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AB67F861CE8A303008FC751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AB67F881CE8A303008FC751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AB67F8E1CE8DF9E008FC751 /* ConversationListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationListTableViewController.h; sourceTree = "<group>"; };
+		5AB67F8F1CE8DF9E008FC751 /* ConversationListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationListTableViewController.m; sourceTree = "<group>"; };
+		5AB67F911CE8DFD5008FC751 /* ConversationListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationListDataSource.h; sourceTree = "<group>"; };
+		5AB67F921CE8DFD5008FC751 /* ConversationListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationListDataSource.m; sourceTree = "<group>"; };
+		5AB67F951CE8E0E2008FC751 /* dummyConversationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dummyConversationModel.h; path = Models/dummyConversationModel.h; sourceTree = "<group>"; };
+		5AB67F961CE8E0E2008FC751 /* dummyConversationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dummyConversationModel.m; path = Models/dummyConversationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,7 @@
 		5AB67F731CE8A303008FC751 /* RapidlyUpdatingTableTest */ = {
 			isa = PBXGroup;
 			children = (
+				5AB67F941CE8E0BF008FC751 /* Models */,
 				5AB67F771CE8A303008FC751 /* AppDelegate.h */,
 				5AB67F781CE8A303008FC751 /* AppDelegate.m */,
 				5AB67F7A1CE8A303008FC751 /* ViewController.h */,
@@ -70,6 +80,10 @@
 				5AB67F881CE8A303008FC751 /* Info.plist */,
 				5AB67F801CE8A303008FC751 /* RapidlyUpdatingTableTest.xcdatamodeld */,
 				5AB67F741CE8A303008FC751 /* Supporting Files */,
+				5AB67F8E1CE8DF9E008FC751 /* ConversationListTableViewController.h */,
+				5AB67F8F1CE8DF9E008FC751 /* ConversationListTableViewController.m */,
+				5AB67F911CE8DFD5008FC751 /* ConversationListDataSource.h */,
+				5AB67F921CE8DFD5008FC751 /* ConversationListDataSource.m */,
 			);
 			path = RapidlyUpdatingTableTest;
 			sourceTree = "<group>";
@@ -80,6 +94,15 @@
 				5AB67F751CE8A303008FC751 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AB67F941CE8E0BF008FC751 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5AB67F951CE8E0E2008FC751 /* dummyConversationModel.h */,
+				5AB67F961CE8E0E2008FC751 /* dummyConversationModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +136,7 @@
 				TargetAttributes = {
 					5AB67F701CE8A301008FC751 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = PCS6LG457P;
 					};
 				};
 			};
@@ -152,10 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB67F901CE8DF9E008FC751 /* ConversationListTableViewController.m in Sources */,
+				5AB67F931CE8DFD5008FC751 /* ConversationListDataSource.m in Sources */,
 				5AB67F7C1CE8A303008FC751 /* ViewController.m in Sources */,
 				5AB67F791CE8A303008FC751 /* AppDelegate.m in Sources */,
 				5AB67F821CE8A303008FC751 /* RapidlyUpdatingTableTest.xcdatamodeld in Sources */,
 				5AB67F761CE8A303008FC751 /* main.m in Sources */,
+				5AB67F971CE8E0E2008FC751 /* dummyConversationModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +296,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RapidlyUpdatingTableTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.keable.matthew.RapidlyUpdatingTableTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -280,10 +311,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RapidlyUpdatingTableTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.keable.matthew.RapidlyUpdatingTableTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
