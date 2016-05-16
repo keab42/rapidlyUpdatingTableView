@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface ConversationListTableViewController : UITableViewController <UITableViewDelegate>
+@interface ConversationListTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

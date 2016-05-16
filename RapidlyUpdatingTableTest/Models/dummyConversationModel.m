@@ -10,4 +10,9 @@
 
 @implementation dummyConversationModel
 
+@dynamic titleText;
+@dynamic dummyText;
+@dynamic timeStamp;
+@dynamic sectionId;
+
 @end
