@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3463DFC71CEB43590052D609 /* DummyMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3463DFC61CEB43590052D609 /* DummyMessageTableViewCell.m */; };
 		5AB67F761CE8A303008FC751 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB67F751CE8A303008FC751 /* main.m */; };
 		5AB67F791CE8A303008FC751 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB67F781CE8A303008FC751 /* AppDelegate.m */; };
 		5AB67F7C1CE8A303008FC751 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB67F7B1CE8A303008FC751 /* ViewController.m */; };
@@ -15,10 +16,12 @@
 		5AB67F841CE8A303008FC751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AB67F831CE8A303008FC751 /* Assets.xcassets */; };
 		5AB67F871CE8A303008FC751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB67F851CE8A303008FC751 /* LaunchScreen.storyboard */; };
 		5AB67F901CE8DF9E008FC751 /* ConversationListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB67F8F1CE8DF9E008FC751 /* ConversationListTableViewController.m */; };
-		5AB67F971CE8E0E2008FC751 /* dummyConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB67F961CE8E0E2008FC751 /* dummyConversationModel.m */; };
+		5AB67F971CE8E0E2008FC751 /* DummyConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB67F961CE8E0E2008FC751 /* DummyConversationModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3463DFC51CEB43590052D609 /* DummyMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DummyMessageTableViewCell.h; path = "Table Cells/DummyMessageTableViewCell.h"; sourceTree = "<group>"; };
+		3463DFC61CEB43590052D609 /* DummyMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DummyMessageTableViewCell.m; path = "Table Cells/DummyMessageTableViewCell.m"; sourceTree = "<group>"; };
 		5AB67F711CE8A301008FC751 /* RapidlyUpdatingTableTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RapidlyUpdatingTableTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB67F751CE8A303008FC751 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5AB67F771CE8A303008FC751 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -32,8 +35,8 @@
 		5AB67F881CE8A303008FC751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AB67F8E1CE8DF9E008FC751 /* ConversationListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationListTableViewController.h; sourceTree = "<group>"; };
 		5AB67F8F1CE8DF9E008FC751 /* ConversationListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationListTableViewController.m; sourceTree = "<group>"; };
-		5AB67F951CE8E0E2008FC751 /* dummyConversationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dummyConversationModel.h; path = Models/dummyConversationModel.h; sourceTree = "<group>"; };
-		5AB67F961CE8E0E2008FC751 /* dummyConversationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dummyConversationModel.m; path = Models/dummyConversationModel.m; sourceTree = "<group>"; };
+		5AB67F951CE8E0E2008FC751 /* DummyConversationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DummyConversationModel.h; path = Models/DummyConversationModel.h; sourceTree = "<group>"; };
+		5AB67F961CE8E0E2008FC751 /* DummyConversationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DummyConversationModel.m; path = Models/DummyConversationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3463DFC41CEB43340052D609 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3463DFC51CEB43590052D609 /* DummyMessageTableViewCell.h */,
+				3463DFC61CEB43590052D609 /* DummyMessageTableViewCell.m */,
+			);
+			name = "Table Cells";
+			sourceTree = "<group>";
+		};
 		5AB67F681CE8A301008FC751 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,7 @@
 		5AB67F731CE8A303008FC751 /* RapidlyUpdatingTableTest */ = {
 			isa = PBXGroup;
 			children = (
+				3463DFC41CEB43340052D609 /* Table Cells */,
 				5AB67F941CE8E0BF008FC751 /* Models */,
 				5AB67F771CE8A303008FC751 /* AppDelegate.h */,
 				5AB67F781CE8A303008FC751 /* AppDelegate.m */,
@@ -94,8 +107,8 @@
 		5AB67F941CE8E0BF008FC751 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5AB67F951CE8E0E2008FC751 /* dummyConversationModel.h */,
-				5AB67F961CE8E0E2008FC751 /* dummyConversationModel.m */,
+				5AB67F951CE8E0E2008FC751 /* DummyConversationModel.h */,
+				5AB67F961CE8E0E2008FC751 /* DummyConversationModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -175,8 +188,9 @@
 				5AB67F7C1CE8A303008FC751 /* ViewController.m in Sources */,
 				5AB67F791CE8A303008FC751 /* AppDelegate.m in Sources */,
 				5AB67F821CE8A303008FC751 /* RapidlyUpdatingTableTest.xcdatamodeld in Sources */,
+				3463DFC71CEB43590052D609 /* DummyMessageTableViewCell.m in Sources */,
 				5AB67F761CE8A303008FC751 /* main.m in Sources */,
-				5AB67F971CE8E0E2008FC751 /* dummyConversationModel.m in Sources */,
+				5AB67F971CE8E0E2008FC751 /* DummyConversationModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

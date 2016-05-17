@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface dummyConversationModel : NSManagedObject
+@interface DummyConversationModel : NSManagedObject
 
 @property (nullable, nonatomic, retain) NSString *titleText;
 @property (nullable, nonatomic, retain) NSString *dummyText;

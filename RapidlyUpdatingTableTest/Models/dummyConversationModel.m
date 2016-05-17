@@ -6,9 +6,9 @@
 //  Copyright © 2016 Matthew Keable. All rights reserved.
 //
 
-#import "dummyConversationModel.h"
+#import "DummyConversationModel.h"
 
-@implementation dummyConversationModel
+@implementation DummyConversationModel
 
 @dynamic titleText;
 @dynamic dummyText;

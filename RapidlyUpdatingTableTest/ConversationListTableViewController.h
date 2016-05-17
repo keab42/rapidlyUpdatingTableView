@@ -11,4 +11,8 @@
 
 @interface ConversationListTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, strong) NSNumber *updatesPerMinute;
+
+- (void) generateMessagesInSections:(NSArray *)numberOfItemsPerSection;
+
 @end

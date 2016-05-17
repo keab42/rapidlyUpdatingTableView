@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ConversationListTableViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UISlider *section1Slider;
@@ -58,7 +59,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //TODO set variables on transition.
+    if ([segue.identifier isEqualToString:@"mainToTableSegue"]) {
+        NSArray *sectionData = @[@(_section1Slider.value), @(_section2Slider.value)];
+        ConversationListTableViewController *dest = (ConversationListTableViewController *)segue.destinationViewController;
+        //Set the information we need
+        [dest generateMessagesInSections:sectionData];
+        dest.updatesPerMinute = @(self.numberUpdatesSlider.value);
+    }
 }
 
 @end

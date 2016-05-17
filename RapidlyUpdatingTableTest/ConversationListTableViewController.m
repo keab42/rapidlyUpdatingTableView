@@ -7,6 +7,8 @@
 //
 
 #import "ConversationListTableViewController.h"
+#import "DummyMessageTableViewCell.h"
+#import "DummyConversationModel.h"
 
 @interface ConversationListTableViewController () <NSFetchedResultsControllerDelegate>
 @property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
@@ -20,6 +22,8 @@
 @end
 
 @implementation ConversationListTableViewController
+
+@synthesize updatesPerMinute;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,23 +46,26 @@
     return [sectionInfo numberOfObjects];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    DummyMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"dummyMessageCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    DummyConversationModel *model = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    cell.titleLabel.text = model.titleText;
+    cell.timestampLabel.text = [NSString stringWithFormat:@"%@", model.timeStamp];
     
     return cell;
 }
-*/
 
-/*
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
+
 
 
 // Override to support editing the table view.
@@ -290,5 +297,29 @@
     return _updatedRowIndexPaths;
 }
 
+#pragma mark - Dummy Data Handling
+
+- (void) generateMessagesInSections:(NSArray *)numberOfItemsPerSection
+{
+    for (int i = 0; i < numberOfItemsPerSection.count; i++) {
+        int numberItems = [numberOfItemsPerSection[i] intValue];
+        for (int j = 0; j < numberItems; j++) {
+        DummyConversationModel *model = [[DummyConversationModel alloc] init];
+            model.titleText = [NSString stringWithFormat:@"Section %d, Cell %d", numberItems, j];
+            model.sectionId = @(i);
+            model.timeStamp = [NSDate date];
+        }
+    }
+}
+
+- (void) deleteAllMessages
+{
+    //TODO
+}
+
+- (void) updateMessages
+{
+    //TODO spawn a thread here that updates a random message on the frequency specified in the class.
+}
 
 @end
